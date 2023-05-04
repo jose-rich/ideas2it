@@ -4,6 +4,8 @@ spring:
       enabled: always
   datasource:
     url: jdbc:mysql://${DB_HOST:localhost}:3306/userdb2?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Turkey
+    #username: root
+    #password: MyPassword
     driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -32,7 +34,7 @@ logging:
     console: '%d{yyyy-MM-dd HH:mm:ss} [%X{traceId:-},%X{spanId:-}] ${LOG_LEVEL_PATTERN:-%5p}
       %m%n'
 server:
-  port: 8080
+  port: 8089
 springdoc:
   packagesToScan: com.i2it.auth
 eureka:
