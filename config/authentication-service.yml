@@ -1,0 +1,20 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%X{traceId:-},%X{spanId:-}] ${LOG_LEVEL_PATTERN:-%5p}
+      %m%n'
+server:
+  port: 8080
+springdoc:
+  packagesToScan: com.i2it.auth
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+management:
+  tracing:
+    sampling:
+      probability: 1.0
