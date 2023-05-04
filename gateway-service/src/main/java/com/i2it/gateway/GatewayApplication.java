@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-@EnableDiscoveryClient
 public class GatewayApplication {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(GatewayApplication.class);

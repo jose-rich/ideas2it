@@ -1,0 +1,8 @@
+server:
+  application:
+    name: authentication-service
+spring:
+  config:
+    import: optional:configserver:http://localhost:8088
+  application:
+    name: authentication-service

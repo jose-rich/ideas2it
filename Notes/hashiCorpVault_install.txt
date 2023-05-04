@@ -1,0 +1,11 @@
+powershell
+ setx path "C:\HashiCorpVault"
+ $env:VAULT_ADDR="http://127.0.0.1:8200"
+ vault kv put secret/authentication-service spring.datasource.username=root
+ vault kv put secret/authentication-service spring.datasource.password=MyPassword
+ vault kv get secret/authentication-service
+ 
+  vault kv put secret/config-service spring.cloud.server.git.username=jose-rich
+   vault kv put secret/config-service spring.cloud.server.git.password =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
+ 
+ 

@@ -2,6 +2,27 @@ spring:
   application:
     name: config-service
   profiles:
-    active: native
+    active:  vault, native
+  cloud:
+    config:
+      server:
+        vault:
+          host: 127.0.0.1
+          port: 8200
+          order: 1
+          kvVersion: 2
+          authentication: TOKEN
+          token: hvs.YEMbzTxvMRXhUrR1OrQT683u
+        git:
+          #username: jose-rich
+          #password: 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
+          uri: https://github.com/jose-rich/ideas2it.git/config
+          clone-on-start: true
+          order: 2
 server:
   port: 8088
+management:
+  health:
+    livenessState.enabled: true
+    readinessState.enabled: true
+  endpoint.health.probes.enabled: true
