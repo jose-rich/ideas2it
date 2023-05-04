@@ -1,6 +1,6 @@
 package com.i2it.security.config;
 
-import com.i2it.security.token.TokenRepository;
+import com.i2it.security.repository.TokenRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

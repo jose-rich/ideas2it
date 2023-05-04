@@ -1,6 +1,6 @@
 package com.i2it.security;
 
-import com.i2it.security.auth.AuthenticationService;
+import com.i2it.security.service.AuthenticationService;
 import com.i2it.security.dto.RegisterRequest;
 import com.i2it.security.user.Role;
 import org.springframework.boot.CommandLineRunner;

@@ -1,6 +1,6 @@
 package com.i2it.security.config;
 
-import com.i2it.security.token.TokenRepository;
+import com.i2it.security.repository.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

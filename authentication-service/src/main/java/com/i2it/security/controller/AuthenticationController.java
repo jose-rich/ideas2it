@@ -2,7 +2,7 @@ package com.i2it.security.controller;
 
 import com.i2it.security.dto.AuthenticationRequest;
 import com.i2it.security.dto.AuthenticationResponse;
-import com.i2it.security.auth.AuthenticationService;
+import com.i2it.security.service.AuthenticationService;
 import com.i2it.security.dto.RegisterRequest;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

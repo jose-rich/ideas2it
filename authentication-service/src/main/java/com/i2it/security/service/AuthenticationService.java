@@ -1,11 +1,11 @@
-package com.i2it.security.auth;
+package com.i2it.security.service;
 
 import com.i2it.security.config.JwtService;
 import com.i2it.security.dto.AuthenticationRequest;
 import com.i2it.security.dto.AuthenticationResponse;
 import com.i2it.security.dto.RegisterRequest;
 import com.i2it.security.token.Token;
-import com.i2it.security.token.TokenRepository;
+import com.i2it.security.repository.TokenRepository;
 import com.i2it.security.token.TokenType;
 import com.i2it.security.user.User;
 import com.i2it.security.repository.UserRepository;

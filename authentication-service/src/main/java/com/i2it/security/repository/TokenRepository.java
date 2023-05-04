@@ -1,8 +1,9 @@
-package com.i2it.security.token;
+package com.i2it.security.repository;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.i2it.security.token.Token;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
