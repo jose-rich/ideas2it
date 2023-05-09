@@ -42,8 +42,6 @@ springdoc:
       - name: authentication
         url: /v3/api-docs/authentication
     path: /swagger-ui.html
-server:
-  port: 8060
 
 management:
   tracing:
