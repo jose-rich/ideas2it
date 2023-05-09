@@ -12,7 +12,7 @@ spring:
           order: 1
           kvVersion: 2
           authentication: TOKEN
-          token: hvs.YEMbzTxvMRXhUrR1OrQT683u
+          token: 00000000-0000-0000-0000-000000000000
         git:
           #username: jose-rich
           #password: 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
