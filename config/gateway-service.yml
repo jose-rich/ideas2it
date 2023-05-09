@@ -23,21 +23,24 @@ spring:
       - id: patient-service
         uri: lb://patient-service
         predicates:
-        - Path=/patient/**
+          - Path=/patient/**
         filters:
-        - RewritePath=/authentication/(?<path>.*), /$\{path}
+          - AuthenticationFilter
+          #- RewritePath=/authentication/(?<path>.*), /$\{path}
       - id: authentication-service
         uri: lb://authentication-service
         predicates:
-        - Path=/authentication/**
+          - Path=/authentication/**
         filters:
-        - RewritePath=/authentication/(?<path>.*), /$\{path}
+          - AuthenticationFilter
+          #- RewritePath=/authentication/(?<path>.*), /$\{path}
       - id: openapi
         uri: http://localhost:${server.port}
         predicates:
-        - Path=/v3/api-docs/**
+          - Path=/v3/api-docs/**
         filters:
-        - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+          - AuthenticationFilter
+          #- RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
 application:
   security:
     jwt:
