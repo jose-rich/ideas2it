@@ -59,12 +59,15 @@ public class PatientEntity extends AuditEntity implements Serializable {
 	private DiagonosesLevel diagonosesLevel;
 
 	@OneToOne
+	@JoinColumn(name = "address_id")
 	private AddressEntity address;
 
 	@ManyToOne
+	@JoinColumn(name = "reference_id")
 	private ReferenceEntity reference;
 
 	@ManyToOne
+	@JoinColumn(name = "physician_id")
 	private PhysicianDtlEntity physicianDtl;
 
 }
