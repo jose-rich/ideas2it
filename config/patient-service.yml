@@ -3,8 +3,7 @@ spring:
     ansi:
       enabled: always
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:3306/user_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Turkey
-
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/patient_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Turkey
     #username: root
     #password: MyPassword
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -35,9 +34,9 @@ logging:
     console: '%d{yyyy-MM-dd HH:mm:ss} [%X{traceId:-},%X{spanId:-}] ${LOG_LEVEL_PATTERN:-%5p}
       %m%n'
 server:
-  port: 8089
+  port: 8070
 springdoc:
-  packagesToScan: com.i2it.auth
+  packagesToScan: com.i2it.patient
 eureka:
   client:
     serviceUrl:
