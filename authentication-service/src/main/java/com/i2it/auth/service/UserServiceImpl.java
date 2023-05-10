@@ -4,7 +4,7 @@ import com.i2it.auth.dto.PaginatedUserResponse;
 import com.i2it.auth.dto.UserDto;
 import com.i2it.auth.mapper.UserMapper;
 import com.i2it.auth.repository.UserRepository;
-import com.i2it.auth.user.User;
+import com.i2it.auth.entity.User;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -31,8 +31,6 @@ public class UserServiceImpl implements UserService {
     public Optional<User> findByUsername(String username) {
         return userRepository.findByEmail(username);
     }
-
-
 
     @Override
     public PaginatedUserResponse getAllUsers(Pageable pageable) {

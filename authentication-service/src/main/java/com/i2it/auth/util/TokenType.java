@@ -1,4 +1,4 @@
-package com.i2it.auth.token;
+package com.i2it.auth.util;
 
 public enum TokenType {
   BEARER

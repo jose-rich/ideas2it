@@ -1,4 +1,4 @@
-package com.i2it.auth.user;
+package com.i2it.auth.util;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -12,25 +12,23 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public enum Role {
 
-  USER(Collections.emptySet()),
+  USER(Set.of(
+          Permission.READ)),
   ADMIN(
           Set.of(
-                  Permission.ADMIN_READ,
-                  Permission.ADMIN_UPDATE,
-                  Permission.ADMIN_DELETE,
-                  Permission.ADMIN_CREATE,
-                  Permission.MANAGER_READ,
-                  Permission.MANAGER_UPDATE,
-                  Permission.MANAGER_DELETE,
-                  Permission.MANAGER_CREATE
+                  Permission.READ,
+                  Permission.UPDATE,
+                  Permission.DELETE,
+                  Permission.CREATE
+
           )
   ),
   MANAGER(
           Set.of(
-                  Permission.MANAGER_READ,
-                  Permission.MANAGER_UPDATE,
-                  Permission.MANAGER_DELETE,
-                  Permission.MANAGER_CREATE
+                  Permission.READ,
+                  Permission.UPDATE,
+                  Permission.DELETE,
+                  Permission.CREATE
           )
   )
 

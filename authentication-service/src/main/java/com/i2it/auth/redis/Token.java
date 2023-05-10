@@ -1,5 +1,6 @@
-package com.i2it.auth.token;
+package com.i2it.auth.redis;
 
+import com.i2it.auth.util.TokenType;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
