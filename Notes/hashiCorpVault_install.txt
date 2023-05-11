@@ -11,6 +11,8 @@ cd C:\HashiCorpVault
  vault kv put secret/authentication-service spring.datasource.password=MyPassword spring.datasource.username=root
  vault kv get secret/authentication-service
  
-  vault kv put secret/config-service spring.cloud.server.git.username=jose-rich spring.cloud.server.git.password =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
-   
+  vault kv put secret/config-service spring.cloud.server.git.username=jose-rich spring.cloud.server.git.password=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
  vault kv get secret/config-service
+ 
+ vault kv put secret/patient-service spring.datasource.password=MyPassword spring.datasource.username=root
+ vault kv get secret/patient-service
