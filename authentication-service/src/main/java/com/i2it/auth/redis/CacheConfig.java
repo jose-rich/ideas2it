@@ -1,4 +1,4 @@
-package com.i2it.auth.token;
+package com.i2it.auth.redis;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.CacheManager;

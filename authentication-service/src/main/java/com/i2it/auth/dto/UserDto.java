@@ -1,6 +1,6 @@
 package com.i2it.auth.dto;
 
-import com.i2it.auth.user.Role;
+import com.i2it.auth.util.Role;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.Data;

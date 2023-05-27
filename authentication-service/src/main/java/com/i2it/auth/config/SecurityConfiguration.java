@@ -1,6 +1,5 @@
 package com.i2it.auth.config;
 
-import com.i2it.auth.user.Permission;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,12 +13,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
 
-import static com.i2it.auth.user.Role.ADMIN;
-import static com.i2it.auth.user.Role.MANAGER;
-import static org.springframework.http.HttpMethod.DELETE;
-import static org.springframework.http.HttpMethod.GET;
-import static org.springframework.http.HttpMethod.POST;
-import static org.springframework.http.HttpMethod.PUT;
+import static com.i2it.auth.util.Role.ADMIN;
+import static com.i2it.auth.util.Role.MANAGER;
 
 @Configuration
 @EnableWebSecurity

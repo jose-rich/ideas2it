@@ -1,17 +1,15 @@
-package com.i2it.auth.user;
+package com.i2it.auth.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.i2it.auth.util.Role;
+import jakarta.persistence.*;
+
 import java.util.Collection;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -20,8 +18,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_user")
-public class User implements UserDetails {
+@Table(name = "user")
+@EntityListeners(AuditingEntityListener.class)
+public class User extends AuditEntity implements UserDetails {
 
   @Id
   @GeneratedValue
@@ -33,9 +32,6 @@ public class User implements UserDetails {
 
   @Enumerated(EnumType.STRING)
   private Role role;
-
-  /*@OneToMany(mappedBy = "user")
-  private List<Token> tokens;*/
 
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {

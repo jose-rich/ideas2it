@@ -2,13 +2,16 @@ package com.i2it.auth.controller;
 
 import com.i2it.auth.dto.AuthenticationRequest;
 import com.i2it.auth.dto.AuthenticationResponse;
-import com.i2it.auth.service.AuthenticationService;
 import com.i2it.auth.dto.RegisterRequest;
+import com.i2it.auth.service.AuthenticationService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 

@@ -11,7 +11,8 @@
 		<module>config-service</module>
 		<module>gateway-service</module>
 		<module>authentication-service</module>
-		
+		<module>patient-service</module>
+		<module>vital-sign-service</module>
 	</modules>
 	
 </project>

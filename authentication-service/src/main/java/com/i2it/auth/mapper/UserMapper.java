@@ -1,7 +1,7 @@
 package com.i2it.auth.mapper;
 
 import com.i2it.auth.dto.UserDto;
-import com.i2it.auth.user.User;
+import com.i2it.auth.entity.User;
 import org.mapstruct.Mapper;
 
 import java.util.List;
