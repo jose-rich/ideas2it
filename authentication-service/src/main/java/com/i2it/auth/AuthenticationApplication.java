@@ -51,7 +51,7 @@ public class AuthenticationApplication {
 					.password("password")
 					.role(Role.USER)
 					.build();
-			System.out.println("user token: " + service.register(manager).getAccessToken());
+			System.out.println("user token: " + service.register(user).getAccessToken());
 
 		};
 	}
